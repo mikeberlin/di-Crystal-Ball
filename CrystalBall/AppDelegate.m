@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CrystalBallViewController.h"
 
 @implementation AppDelegate
 
@@ -14,7 +15,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+
+    CrystalBallViewController *vcCrystalBall = [[CrystalBallViewController alloc] init];
+    self.window.rootViewController = vcCrystalBall;
+
     [self.window makeKeyAndVisible];
     return YES;
 }
